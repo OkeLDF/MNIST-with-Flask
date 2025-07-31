@@ -24,4 +24,4 @@ def post_img():
 
 if __name__ == '__main__':
     print(model, 'loaded successfully')
-    app.run(debug=True)
+    app.run()
