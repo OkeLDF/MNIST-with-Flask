@@ -3,7 +3,7 @@ from config import app
 import joblib
 import numpy as np
 
-model = joblib.load('./model.pkl')
+model = joblib.load('./model.joblib')
 
 @app.route('/', methods=['GET'])
 def get_page():
