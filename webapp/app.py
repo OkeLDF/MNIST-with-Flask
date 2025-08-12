@@ -12,7 +12,19 @@ model = joblib.load('./model.joblib')
 def get_page():
     return render_template('index.html')
 
-@app.route('/send_img', methods=['POST'])
+@app.route('/dataset', methods=['GET'])
+def get_dataset():
+    return render_template('dataset.html')
+
+@app.route('/dataset/send', methods=['POST'])
+def send_dataset():
+    img = request.json.get('img')
+    # Here you would typically save the image data to your dataset
+    # print("Received image data:", img)
+
+    return jsonify({"status": "ok"}), 200
+
+@app.route('/predict', methods=['POST'])
 def post_img():
     img = request.json.get('img')
 
@@ -27,4 +39,4 @@ def post_img():
 
 if __name__ == '__main__':
     print(model, 'loaded successfully')
-    app.run()
+    app.run(debug=True)

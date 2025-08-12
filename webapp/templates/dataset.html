@@ -18,19 +18,12 @@
                 <canvas id="drawing-board"></canvas>
             </div>
             <div id="buttons">
-                <button id="clear">Clear</button>
-                <button id="predict">Predict</button>
+                <button id="clear">Limpar</button>
+                <button id="send">Enviar</button>
             </div>
         </div>
-
-        <div id="outputs">
-            <div id="prediction-output"></div>
-            <div id="probability-bars"></div>
-        </div>
-        <div id="resize">
-        </div>
     </main>
-    <script type="module" src="{{ url_for('static', filename='index.js') }}"></script>
     <script type="module" src="{{ url_for('static', filename='canvas.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='dataset.js') }}"></script>
 </body>
 </html>
