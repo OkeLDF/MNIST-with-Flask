@@ -73,4 +73,4 @@ canvas.addEventListener('mouseleave', end_stroke)
 canvas.addEventListener('mousemove', draw)
 canvas.addEventListener('touchmove', draw)
 
-export { ctx_resized }
+export { canvas, ctx, ctx_resized }

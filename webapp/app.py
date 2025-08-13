@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 import joblib
 import numpy as np
+from PIL import Image
+import time
 
 app = Flask(__name__)
 CORS(app)
@@ -19,8 +21,10 @@ def get_dataset():
 @app.route('/dataset/send', methods=['POST'])
 def send_dataset():
     img = request.json.get('img')
-    # Here you would typically save the image data to your dataset
-    # print("Received image data:", img)
+    number = request.json.get('number')
+
+    img = np.array(img).reshape(28, 28).astype(np.uint8)
+    Image.fromarray(img).save(f'./static/dataset/img-{number}-{time.time()}.png')
 
     return jsonify({"status": "ok"}), 200
 

@@ -3,7 +3,6 @@ export function ravel_img(ctx_resized){
     const bw_img_ravel = []
 
     for (let y = 0; y < 28; y++) {
-        const row = []
         for (let x = 0; x < 28; x++) {
             const index = (y * 28 + x) * 4
             const brightness = img[index + 3]

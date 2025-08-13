@@ -100,3 +100,16 @@ canvas {
     font-size: 12px;
     color: #333;
 }
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#number-input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
