@@ -25,7 +25,19 @@ send_btn.addEventListener('click', (e) => {
     const number = number_input.value
 
     if(!number) {
-        alert("Por favor, insira qual número foi desenhado.")
+        alert("Insira qual número foi desenhado.")
+        return
+    }
+
+    if(number < 0 || number > 9) {
+        alert("Insira um número entre 0 e 9.")
+        number_input.value = ""
+        return
+    }
+
+    if(number != Math.floor(number)) {
+        alert("Insira um número inteiro.")
+        number_input.value = ""
         return
     }
 

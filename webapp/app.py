@@ -26,7 +26,9 @@ def send_dataset():
     img = np.array(img).reshape(28, 28).astype(np.uint8)
     Image.fromarray(img).save(f'./static/dataset/img-{number}-{time.time()}.png')
 
-    return jsonify({"status": "ok"}), 200
+    return jsonify({
+        "status": "ok"
+    }), 200
 
 @app.route('/predict', methods=['POST'])
 def post_img():
