@@ -92,7 +92,7 @@ predict_btn.addEventListener('click', (e) => {
         }
     }
 
-    fetch("https://mnist-with-flask.onrender.com/send_img", {
+    fetch("https://okeldf.pythonanywhere.com/send_img", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
